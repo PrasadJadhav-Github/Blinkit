@@ -1,17 +1,17 @@
-package com.example.blinkit
+package com.example.blinkit.authentication
 
 import android.os.Build
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
-import androidx.core.widget.addTextChangedListener
 import androidx.navigation.fragment.findNavController
+import com.example.blinkit.R
+import com.example.blinkit.Utils
 import com.example.blinkit.databinding.FragmentSignInBinding
 
 class SignInFragment : Fragment() {
@@ -33,7 +33,7 @@ class SignInFragment : Fragment() {
         binding.btnContinue.setOnClickListener {
             val number = binding.edtUserName.text.toString()
             if (number.isEmpty() || number.length != 10) {
-                Toast.showToast(requireContext(), "Please Enter a Valid 10-Digit Phone Number")
+                Utils.showToast(requireContext(), "Please Enter a Valid 10-Digit Phone Number")
             } else {
                 val bundle = Bundle()
                 bundle.putString("number", number)
@@ -63,11 +63,15 @@ class SignInFragment : Fragment() {
             override fun onTextChanged(number: CharSequence?, start: Int, before: Int, count: Int) {
                 val length = number?.length
                 if (length == 10) {
-                    binding.btnContinue.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.green))
+                    binding.btnContinue.setBackgroundColor(ContextCompat.getColor(requireContext(),
+                        R.color.green
+                    ))
                 } else {
                     val bundle =Bundle()
                     bundle.putString("number", number.toString())
-                    binding.btnContinue.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.grayeshBule))
+                    binding.btnContinue.setBackgroundColor(ContextCompat.getColor(requireContext(),
+                        R.color.grayeshBule
+                    ))
                 }
             }
 
