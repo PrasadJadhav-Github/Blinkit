@@ -1,5 +1,6 @@
 package com.example.blinkit.authentication
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -12,6 +13,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.blinkit.R
 import com.example.blinkit.Utils
+import com.example.blinkit.activity.UsersMainActivity
 import com.example.blinkit.databinding.FragmentOTPBinding
 import com.example.blinkit.models.Users
 import com.example.blinkit.viewmodels.AuthenticationViewModel
@@ -64,6 +66,8 @@ class OTPFragment : Fragment() {
             if (it){
                 Utils.hideDialog()
                 Utils.showToast(requireContext(),"Logged in...")
+                startActivity(Intent(requireActivity(),UsersMainActivity::class.java))
+                requireActivity().finish()
             }
         }
         }
