@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="2.60dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/imageViewCategoryImage"
+            android:layout_width="78.00dp"
+            android:layout_height="78.00dp"
+            android:background="@drawable/baground_category"
+            android:scaleType="centerInside"
+            android:src="@drawable/vegetable" />
+
+        <TextView
+            android:id="@+id/textViewCategoryTitle"
+            android:layout_width="78.00dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6.50dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="Vegetables and Fruits"
+            android:textColor="@color/black"
+            android:textSize="14.30sp" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
