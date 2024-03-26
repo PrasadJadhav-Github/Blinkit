@@ -7,18 +7,23 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import com.example.blinkit.adapters.AdapterCategory
+import com.example.blinkit.databinding.FragmentHomeBinding
 import com.example.blinkit.models.Category
 
 
 class HomeFragment : Fragment() {
 
+    private lateinit var binding :FragmentHomeBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        binding=FragmentHomeBinding.inflate(layoutInflater)
         setStatusBarColor()
         setAllCategories()
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        return binding.root
+
     }
 
     private fun setAllCategories() {
@@ -27,6 +32,8 @@ class HomeFragment : Fragment() {
         for (i in 0 until Constants.allProductsCategoryIcon.size){
             categoryList.add(Category(Constants.allProductsCategory[i],Constants.allProductsCategoryIcon[i]))
         }
+
+        binding.recyclerviewCategory.adapter=AdapterCategory(categoryList)
     }
 
 

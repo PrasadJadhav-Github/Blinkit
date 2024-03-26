@@ -60,7 +60,7 @@
                         android:hint="Search"
                         android:padding="10dp"
                         android:textSize="@dimen/_15ssp"
-                        android:textColorHint="@color/black"
+                        android:textColorHint="@color/white"
                         app:drawableStartCompat="@drawable/search_icon"/>
                 </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
@@ -92,7 +92,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
                     android:text="BestSellers"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="@dimen/_14sdp"
                     android:textStyle="bold"/>
 
@@ -115,16 +115,17 @@
                 android:id="@+id/Categories"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
                 android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/recyclerviewBestSellers">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/_5sdp"
                     android:text="Shop by Category"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="@dimen/_14ssp"
                     android:textStyle="bold"/>
 
@@ -137,6 +138,7 @@
                     app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                     app:spanCount="4"/>
             </LinearLayout>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 

@@ -69,7 +69,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/border"
                     android:drawablePadding="9.1dp"
-                    android:drawableStart="@drawable/mobile_phone_icon"
+                    android:drawableStart="@drawable/baseline_phone_24"
                     android:hint="Enter Mobile Number"
                     android:inputType="number"
                     android:textColor="@android:color/black"
